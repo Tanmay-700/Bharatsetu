@@ -1,9 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import { User, Sparkles, Copy, Check, Compass } from 'lucide-react';
 import { Message, SourceCitation } from '../../types';
 import { CitationCard } from './CitationCard';
+import { formatMathContent } from '../../utils/mathFormatter';
 
 interface ChatThreadProps {
   messages: Message[];
@@ -100,8 +103,11 @@ export const ChatThread: React.FC<ChatThreadProps> = ({
                   <p className="whitespace-pre-wrap">{msg.content}</p>
                 ) : (
                   <div className="prose prose-sm max-w-none prose-slate prose-p:leading-relaxed prose-pre:bg-slate-900 prose-pre:text-slate-100">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                      {msg.content}
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm, remarkMath]}
+                      rehypePlugins={[[rehypeKatex, { output: 'html' }]]}
+                    >
+                      {formatMathContent(msg.content)}
                     </ReactMarkdown>
                   </div>
                 )}
@@ -176,8 +182,11 @@ export const ChatThread: React.FC<ChatThreadProps> = ({
 
               {streamingAnswer ? (
                 <div className="prose prose-sm max-w-none prose-slate">
-                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                    {streamingAnswer}
+                  <ReactMarkdown
+                    remarkPlugins={[remarkGfm, remarkMath]}
+                    rehypePlugins={[[rehypeKatex, { output: 'html' }]]}
+                  >
+                    {formatMathContent(streamingAnswer)}
                   </ReactMarkdown>
                 </div>
               ) : (

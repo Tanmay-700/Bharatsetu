@@ -40,6 +40,9 @@ CRITICAL GROUNDING RULES:
    "Based on the provided documents, this information is not available."
 4. Always cite the exact source document, section/clause, and page number when stating facts.
 5. Provide your entire explanation in {lang_name}. If standard technical, legal, or scientific terms (e.g. 'Ampere', 'Maternity Leave', 'VPN', 'Two-Factor Authentication') are commonly used in English, you may mention the English term in parentheses alongside the native script.
+6. FORMULA & CALCULATION FORMATTING:
+   - When presenting calculations, equations, or scientific formulas, format them cleanly using LaTeX notation: use $...$ for inline math (e.g. $W = V \\times Q$) and $$...$$ on separate lines for display equations.
+   - Ensure calculations are clear, step-by-step, and fully readable.
 {domain_instruction}
 """
 
