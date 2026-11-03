@@ -1,0 +1,42 @@
+[
+  {
+    "id": "q1",
+    "question": "मातृत्व अवकाश (Maternity Leave) के लिए कंपनी की क्या पात्रता शर्तें हैं?",
+    "language": "hi",
+    "expected_domain": "HR Policies",
+    "ground_truth_doc": "Employee_Leave_Policy.pdf",
+    "ground_truth_clause": "Clause 4.2"
+  },
+  {
+    "id": "q2",
+    "question": "What is the password expiry period according to IT security?",
+    "language": "en",
+    "expected_domain": "IT Security",
+    "ground_truth_doc": "IT_Security_Protocol.pdf",
+    "ground_truth_clause": "Section 3.1"
+  },
+  {
+    "id": "q3",
+    "question": "மின்னோட்டத்தின் SI அலகு என்ன மற்றும் அதன் சூத்திரம் என்ன?",
+    "language": "ta",
+    "expected_domain": "Physics",
+    "ground_truth_doc": "Physics_Class10_Ch12.pdf",
+    "ground_truth_clause": "Section 12.1"
+  },
+  {
+    "id": "q4",
+    "question": "કંપનીમાં પીઓએસએચ (POSH) પોલિસી હેઠળ ફરિયાદ કેવી રીતે દાખલ કરવી?",
+    "language": "gu",
+    "expected_domain": "Compliance & Ethics",
+    "ground_truth_doc": "POSH_Policy_Guide.pdf",
+    "ground_truth_clause": "Clause 6"
+  },
+  {
+    "id": "q5",
+    "question": "ઓહ્મનો નિયમ શું છે?",
+    "language": "gu",
+    "expected_domain": "Physics",
+    "ground_truth_doc": "Physics_Class10_Ch12.pdf",
+    "ground_truth_clause": "Section 12.2"
+  }
+]
