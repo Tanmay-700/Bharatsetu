@@ -26,6 +26,7 @@ env/
 ENV/
 
 # Data, SQLite databases, and logs
+data/
 backend/data/*.db
 backend/data/*.sqlite3
 backend/data/vectordb/*

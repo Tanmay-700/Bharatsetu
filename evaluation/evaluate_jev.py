@@ -2,9 +2,12 @@ import sys
 import json
 import time
 from pathlib import Path
+from dotenv import load_dotenv
 
-# Add backend to path
-sys.path.append(str(Path(__file__).resolve().parent.parent / "backend"))
+# Load backend environment variables
+backend_dir = Path(__file__).resolve().parent.parent / "backend"
+load_dotenv(backend_dir / ".env")
+sys.path.append(str(backend_dir))
 
 from app.services.routing.jev_router import JevRouter
 from app.services.retrieval.embeddings import embedding_service
